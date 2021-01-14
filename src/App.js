@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Button from './components/Button.component';
 import Input from './components/Input.component';
+import ClearButton from './components/ClearButton.component';
 
 import './App.css';
 
@@ -36,6 +37,9 @@ function App() {
             <Button>0</Button>
             <Button>=</Button>
             <Button>-</Button>
+          </div>
+          <div className="row">
+            <ClearButton>Clear</ClearButton>
           </div>
         </div>
       </div>
