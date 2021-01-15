@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import './Input.css';
 
 class Input extends Component {
-    render() {
+    render(props) {
         return(
             <div className="input">
-                test input
+                {this.props.children}
             </div>
         )
     }
