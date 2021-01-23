@@ -28,6 +28,13 @@ class App extends Component {
     }
   };
 
+  addDecimalInput = (value) => {
+    // add decimal if there is no current decimal point in input area
+    if(this.state.input.indexOf(".") === -1){
+      this.setState({input: this.state.input + value});
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -56,7 +63,7 @@ class App extends Component {
               <Button>+</Button>
             </div>
             <div className="row">
-              <Button>.</Button>
+              <Button handleClick={this.addDecimalInput}>.</Button>
               <Button handleClick={this.addZeroToInput}>0</Button>
               <Button>=</Button>
               <Button>-</Button>
