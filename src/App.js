@@ -21,6 +21,13 @@ class App extends Component {
     this.setState({input: this.state.input + value});
   };
 
+  addZeroToInput = (value) => {
+    // add zero to input only if the input is ot empty
+    if(this.state.input !== ""){
+      this.setState({input: this.state.input + value});
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -50,7 +57,7 @@ class App extends Component {
             </div>
             <div className="row">
               <Button>.</Button>
-              <Button>0</Button>
+              <Button handleClick={this.addZeroToInput}>0</Button>
               <Button>=</Button>
               <Button>-</Button>
             </div>
