@@ -22,7 +22,6 @@ class App extends Component {
   };
 
   addZeroToInput = (value) => {
-    // add zero to input only if the input is ot empty
     if(this.state.input !== ""){
       this.setState({input: this.state.input + value});
     }
