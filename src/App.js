@@ -29,7 +29,7 @@ class App extends Component {
   };
 
   addDecimalInput = (value) => {
-    // add decimal if there is no current decimal point in input area
+
     if(this.state.input.indexOf(".") === -1){
       this.setState({input: this.state.input + value});
     }
